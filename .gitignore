@@ -1,0 +1,71 @@
+# =============================================================================
+# SecureChain .gitignore
+# Rule of thumb: source code and documentation are published; anything that is
+# generated on your machine, or that could contain wallet keys, is not.
+# =============================================================================
+
+# ---- Wallet data and secrets (NEVER publish) --------------------------------
+# The SQLite ledger stores every wallet's (password-encrypted) private key.
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+# Exported wallet keystores and any other key material
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+securechain-*.pem
+# Environment files and local Streamlit secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# ---- Python -----------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+pip-wheel-metadata/
+
+# ---- Test and tooling caches ------------------------------------------------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Local backups and scratch files ----------------------------------------
+# backup/ holds a zip of the first UI version. It contains compiled .pyc files
+# with local machine paths, and Git history replaces it anyway.
+backup/
+*.zip
+*.bak
+*.tmp
+*.log
+
+# ---- Editors and operating systems ------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+# ---- Additional local runtime artifacts -------------------------------------
+.streamlit/credentials.toml
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

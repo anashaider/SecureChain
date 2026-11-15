@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SecureChain visualization</title>
+  <link rel="stylesheet" href="viz.css?v=3">
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Three.js r147 (MIT licence) is shipped with the project, so the 3D views work offline. -->
+  <script src="three.min.js"></script>
+  <script src="core.js?v=3"></script>
+  <script src="chain.js?v=3"></script>
+  <script src="network.js?v=3"></script>
+  <script src="pow.js?v=3"></script>
+  <script src="hashdiff.js?v=3"></script>
+  <script>
+    // Tell Streamlit this frame is ready to receive data.
+    SC.post("streamlit:componentReady", { apiVersion: 1 });
+  </script>
+</body>
+</html>

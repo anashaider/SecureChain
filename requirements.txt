@@ -1,0 +1,5 @@
+# SecureChain dependencies
+cryptography>=42.0    # ECDSA keys, signatures, encrypted key storage
+streamlit>=1.40       # Web dashboard
+pandas>=2.0           # Tables and charts in the dashboard
+pytest>=8.0           # Automated tests

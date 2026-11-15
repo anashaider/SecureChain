@@ -1,0 +1,11 @@
+# Streamlit settings for SecureChain (dark, cybersecurity-style theme)
+
+[theme]
+base = "dark"
+primaryColor = "#22d3ee"
+backgroundColor = "#0a101d"
+secondaryBackgroundColor = "#111a2c"
+textColor = "#e2e8f0"
+
+[browser]
+gatherUsageStats = false

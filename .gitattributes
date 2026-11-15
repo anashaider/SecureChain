@@ -1,0 +1,13 @@
+# Consistent line endings across Windows, macOS and Linux
+* text=auto
+*.py   text eol=lf
+*.js   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.md   text eol=lf
+*.toml text eol=lf
+*.png  binary
+
+# Three.js is a third-party library shipped with the project: keep it out of
+# GitHub's language statistics and collapse it in diffs.
+ui/frontend/three.min.js linguist-vendored -diff
